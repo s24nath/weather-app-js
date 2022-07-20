@@ -1,0 +1,206 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #A5C9CA;
+  padding: 50px 0;
+}
+.wrapper {
+  width: 400px;    
+}
+.top-part {
+  border-radius: 7px;
+  background: #E7F6F2;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+.wrapper header {
+  display: flex;
+  font-size: 21px;
+  font-weight: 500;
+  color: #395B64;
+  padding: 16px 15px;
+  align-items: center;  
+  border-bottom: 1px solid #ccc;
+}
+.wrapper header .geo-location {
+  border: none;
+  background: none;
+  margin: 0;
+  margin-left: auto;
+  color: #395B64;
+}
+header i {
+  font-size: 0em;
+  cursor: pointer;
+  display: block;
+  margin-right: 8px;
+}
+.wrapper header i {
+  font-size: 30px;
+}
+.wrapper .input-part {
+  padding: 20px 25px 30px;  
+  margin-bottom: 30px;
+}
+.info-txt {
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+.info-txt.error {
+  color: #721c24;
+  display: block;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.info-txt.pending {
+  color: #0c5460;
+  display: block;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+.input-part input {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+}
+.input-part .select-control {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  color: #2C3333;
+}
+.input-part .select-control:nth-child(2) {
+  margin: 20px 0;
+}
+.input-part .select-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.input-part input {
+  text-align: center;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+}
+.input-part input:is(:focus, :valid) {
+  border: 2px solid #43affc;
+}
+.input-part input::placeholder {
+  color: #bfbfbf;
+}
+.input-part .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #ccc;
+}
+.wrapper .weather-part {
+  display: flex;
+  margin: 30px 0 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #2C3333;
+  border-radius: 7px;
+  background: #E7F6F2;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.wrapper .weather-part.active {  
+  height: 450px;
+}
+.weather-part img {
+  max-width: 125px;
+}
+.weather-part .temp {
+  display: flex;
+  font-weight: 500;
+  font-size: 72px;
+}
+.weather-part .temp .numb {
+  font-weight: 600;
+}
+.weather-part .temp .deg {
+  font-size: 40px;
+  display: block;
+  margin: 10px 5px 0 0;
+}
+.weather-part .weather {
+  font-size: 21px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+.weather-part .location {
+  display: flex;
+  font-size: 19px;
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+.location i {
+  font-size: 22px;
+  margin: 4px 5px 0 0;
+}
+.weather-part .bottom-details {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.bottom-details .column {
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: center;
+}
+.column i {
+  color: #395B64;
+  font-size: 40px;
+}
+.column.humidity {
+  border-left: 1px solid #ccc;
+}
+.column .details {
+  margin-left: 3px;
+}
+.details .temp,
+.humidity span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+.details .temp .deg {
+  margin: 0;
+  font-size: 17px;
+  padding: 0 2px 0 1px;
+}
+.column .details p {
+  font-size: 14px;
+  margin-top: -6px;
+}
+.humidity i {
+  font-size: 37px;
+}
