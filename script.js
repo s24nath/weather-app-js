@@ -36,8 +36,8 @@ const fetchWeather = (country, state, city) => {
       .then((response) => response.json())
       .then((result) => fetchWeatherByLatLon(result[0]))
       .catch(() => {
-        infoTxt.innerHTML = "Error occured while fetching Geolocation.";
-        infoTxt.classList.replace("pending", "error");
+        infoTxt.innerHTML = 'Cannot fetch Geolocation of the provide Country/State/City.';
+        infoTxt.classList.add("error");
       });
   }
   if (state) {
@@ -314,8 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
         selectState.value,
         selectCity.value
       ).then((isWeatherFetched) => {
-        infoTxt.classList.remove("pending", "error");
-        infoTxt.innerText = "";
+        infoTxt.classList.remove("pending");
         isWeatherFetched && weatherDetailsContainer.classList.add("active");
       });
     }
